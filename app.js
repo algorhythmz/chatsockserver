@@ -10,7 +10,9 @@ http.listen(process.env.PORT ||3000);
 
 
 function serverHandler(req,res) {
-    res.end('Socket Server is running on Port 3000');
+     if (req.url == '/') {
+        res.end('Socket Server is running on Port 3000');
+     }
 }
 
 io.on('connection',function (socket) {
