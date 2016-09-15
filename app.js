@@ -12,7 +12,7 @@ http.listen(process.env.PORT ||3000);
 function serverHandler(req,res) {
      if (req.url == '/') {
           res.writeHead(200, {"Content-type" : "text/plain"});
-          res.write("Error 404: resource not found");
+          res.write("Socket Server listening now : ");
           res.end();
      }
 }
